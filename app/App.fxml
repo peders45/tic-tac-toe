@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TictactoeController">
+   <children>
+      <GridPane fx:id="board" gridLinesVisible="true" layoutX="190.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="tl" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="tc" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="tr" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="2">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="cl" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="cc" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="cr" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="bl" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.rowIndex="2">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="bc" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="br" onMouseClicked="#handleChangeRute" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="65.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <Button fx:id="newgame" disable="true" layoutX="236.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleNewGame" text="New Game" />
+      <Text fx:id="turn" layoutX="190.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turn: X" />
+      <Text fx:id="alert" layoutX="184.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="212.00001525878906">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="savegame" disable="true" layoutX="314.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleSaveGame" text="Save Game" />
+   </children>
+</AnchorPane>
